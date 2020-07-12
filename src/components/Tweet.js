@@ -10,9 +10,18 @@ class Tweet extends Component {
             return <p>This tweet doesn't exist</p>
         }
 
+        const { name, id, timestamp, text, avatar, likes, replies,
+                hasLiked, parent } = tweet;
+
         console.log(this.props);
         return (
-            <div className='tweet'></div>
+            <div className='tweet'>
+                <img
+                    src={avatar}
+                    alt={`Avatar of ${name}`}
+                    className='avatar'
+                />
+            </div>
         );
     }
 
